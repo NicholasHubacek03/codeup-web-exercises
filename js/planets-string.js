@@ -25,8 +25,19 @@
      * string, and <li> tags around each planet.
      */
 
-    let planetsWbr = planetsArray.join("<br>");
-    console.log(planetsWbr);
-
+    // let planetsWbr = planetsArray.join("<br>");
+    // console.log(planetsWbr);
+    //
+    // let ulPlanets;
+    // let listring;
+    //
+    // planetsArray.forEach(function (planet){
+    //     listring = "<li>" + planet + "</li>"
+    //     ulPlanets += listring;
+    // }
+    // if (planet === planetsArray[planetsArray.length -1]){
+    //     ulPlanets + "</ul>";
+    // })
+    // console.log(ulPlanets)
 })();
 

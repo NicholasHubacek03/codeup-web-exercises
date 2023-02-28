@@ -63,7 +63,7 @@ console.log("There are " + names.length + " In this name.")
         return array[1];
     }
     function last(array) {
-        var last = array.length - 1;
+        let last = array.length - 1;
         console.log("The last element is " + array[last]);
         return array[last];
     }
