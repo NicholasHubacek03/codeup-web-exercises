@@ -1,0 +1,32 @@
+#fancy-header{
+    color: purple;
+}
+h1{
+    text-align: center;
+}
+
+.h2underlined {
+    text-decoration: underline;
+    text-decoration-color: green;
+}
+
+body{
+    background-image: url("https://images.unsplash.com/photo-1489769002049-ccd828976a6c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1961&q=80");
+    background-repeat: no-repeat;
+}
+#square{
+    list-style: square;
+}
+body{
+    font-family: "Academy Engraved LET";
+    font-weight: revert;
+}
+.lisytle{
+    font-family: "Al Nile";
+}
+a:link{
+color: red;
+}
+a:visited{
+    color: green;
+}
