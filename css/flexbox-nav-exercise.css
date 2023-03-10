@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+nav {
+    background: gray;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-family: Mon ;
+    display: inline-block;
+    padding: 0.5em;
+}
+nav a:hover {
+    background: gray;
+}
+nav ul li:nth-child() {
+    /*
+        this allows the last flex item to be right justified
+        by filling remaining space to the left of the flex item with margin
+    */
+    margin-left: auto;
+    align-items: center;
+}
+
+nav ul li:nth-child() {
+
+    align-items: center;
+    margin-top: auto;
+
+}
+#
