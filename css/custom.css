@@ -1,0 +1,33 @@
+.btn-outline-success{
+    box-sizing: border-box;
+    width: 100%;
+}
+.jumbotron{
+    background-image: url("/pizza.png");
+    height: 346px;
+    background-size: cover;
+    display: flex;
+}
+.bg-light{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-grow: 1;
+    font-weight: bold;
+    font-size: 50px;
+
+}
+.card-body{
+    border: 12px;
+    padding: 1px;
+    float: left;
+}
+.card-header{
+    color: white;
+    background-color: blue;
+}
+.card-body{
+    padding: 10px;
+    color: white;
+    background-color: blue;
+}
