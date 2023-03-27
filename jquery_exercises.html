@@ -8,9 +8,50 @@
     <title>Document</title>
 </head>
 <body>
+<h1 id="header">jQuery selector exercise</h1>
+<h1 id="title">Exercise complete</h1>
+<div>
+    <ul>
+        <li class="codeup">dog</li>
+        <li class="codeup">cat</li>
+        <li class="codeup">fish</li>
+        <li>hedgehog</li>
+        <li id="codeup">monkey</li>
+    </ul>
+</div>
+<p id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci doloremque impedit molestiae. A architecto eum exercitationem? A asperiores atque exercitationem, ipsa ipsum molestias nobis quibusdam sit ut vitae voluptate voluptates.</p>
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+<script>
+    // $(function (){
+        // alert($("#content").html())
 
+        // $(".codeup").css("border", "1px solid red")
 
-<script src="js/jquery-3.6.4.js"></script>
-<script src="js/jquery-exercise.js"></script>
+        // $("li").css("font-size", "20px")
+        //
+        // $("h1, p, li").css("background", "yellow");
+        // alert($("h1").html());
+
+        // $("h1").css("background", "red")
+        // $("p").css("background", "red")
+        // $("li").css("background", "red")
+
+    // })
+    $('h1').click(
+        function (){
+        $(this).css('background-color', '#FF0')
+    })
+    $("p").dblclick(function (){
+        $(this).css('font-size', "18px")
+    })
+    $('li').hover(
+        function() {
+            $(this).css('color', 'red');
+        },
+        function() {
+            $(this).css('color', 'black');
+        }
+    );
+</script>
 </body>
 </html>
