@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-3.6.4.js"></script>
+</head>
+<body>
+<div id="posts">
+
+</div>
+</body>
+<script>
+    $.get("data/blog.json").done(function (data){
+        console.log(data)
+    })
+    $(document).ready(function() {
+        $.ajax({
+            url: "data/blog.json",
+            success: function(data) {
+                // Loop through the data and append it to the posts div
+                $.each(data, function(index, post) {
+                    let newPost = $("<div>");
+                    let title = $("<h2>").text(post.title);
+                    let content = $("<p>").text(post.content);
+
+                    newPost.append(title, content);
+                    $("#posts").append(newPost);
+                });
+            },
+            error: function(xhr, status, error) {
+                console.log("Error: " + error.message);
+            }
+        });
+    });
+
+</script>
+<style>
+    h2{
+        background-color: #DDDDDD;
+    }
+</style>
+</html>
