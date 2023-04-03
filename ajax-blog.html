@@ -18,9 +18,8 @@
         console.log(data)
     })
     $(document).ready(function() {
-        $.ajax({
-            url: "data/blog.json",
-            success: function(data) {
+        $.ajax({ url: "data/blog.json",
+            function(data) {
                 // Loop through the data and append it to the posts div
                 $.each(data, function(index, post) {
                     let newPost = $("<div>");
@@ -31,9 +30,6 @@
                     $("#posts").append(newPost);
                 });
             },
-            error: function(xhr, status, error) {
-                console.log("Error: " + error.message);
-            }
         });
     });
 
