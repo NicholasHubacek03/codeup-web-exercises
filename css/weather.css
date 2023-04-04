@@ -1,0 +1,19 @@
+.card {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    padding: 15px;
+}
+h2{
+    align-items: center;
+}
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .card-deck {
+        flex-direction: row;
+    }
+}
