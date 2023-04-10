@@ -18,7 +18,8 @@
     }
 </style>
 <h1>10 FAQs about national parks:</h1>
-<button>toggle</button>
+<button id="button1">toggle</button>
+<button id="button2">toggle2</button>
 <dl>
     <dt>The National Park</dt>
     <dd class="invisible">Service protects over 84 million acres of wild landscapes and historic sites.</dd>
@@ -50,8 +51,8 @@
     <dt>Dry Tortuga National Park</dt>
     <dd class="invisible">in Florida is known for its world-renowned concentration of turtles.</dd>
 
-
 </dl>
+
 <h3 id="BigBendNationalPark">National Parks</h3>
 <ul id="bigbend">
     <li>Is in the USA.</li>
@@ -75,29 +76,25 @@
 </ul>
 
 <script>
-    $(document).ready(function(){
-        $("button").click(function(){
-            $("dd").toggleClass("main");
-        });
-    });
+
+    $('#button1').click(function (){
+        $('dd').toggleClass('main');
+    })
     $('dt').click(
         function() {
             $(this).css('background', 'yellow');
         })
-    // $('dd').css('visibility', 'hidden')
-    // $(document).ready(function() {
-    //     $("button").hover(function () {
-    //         $("dd").css('visibility', 'hidden');
-    //     })
-    // })
-    // $('dd').hover(
-    //     function() {
-    //         $(this).css('visibility', 'hidden');
-    //     },
-    //     function() {
-    //         $(this).css('visibility', 'visible');
-    //     }
-    // );
+$('#button2').click(function (){
+    $('ul').each(function (){
+        $(this).children().last().css('background', 'yellow')
+        })
+    })
+    $('h3').click(function (){
+        $(this).next().css('font-weight', 'bold')
+    })
+    $('li').click(function(){
+        $(this).parent().children().first().css('color', 'blue');
+    })
 </script>
 </body>
 </html>
