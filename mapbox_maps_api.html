@@ -16,7 +16,6 @@
 </head>
 <body>
 
-<h1>My First Mapbox Map!</h1>
 
 <!-- The HTML element that serves as the Mapbox container -->
 <div id='map'></div>
@@ -37,13 +36,22 @@
         center: [-98.4916, 29.4252]
     });
 
-    // // the  geocode method from mapbox-geocoder-utils.js
-    // geocode("600 Navarro St #350, San Antonio, TX 78205", "pk.eyJ1IjoibmljaG9sYXMtaHViYWNlazAzIiwiYSI6ImNsZzEwdDU3NDEwMHkzcm9obXV4eHAwa2gifQ.gnKpQnhwJd18ch_1c-k7VQ").then(function(result) {
-    //     console.log(result);
-    //     map.setCenter(result);
-    //     map.setZoom(20);
-    // });
+    // the  geocode method from mapbox-geocoder-utils.js
+    geocode("1229 8th Ave Suite 227, Fort Worth, TX 76104", "pk.eyJ1IjoibmljaG9sYXMtaHViYWNlazAzIiwiYSI6ImNsZzEwdDU3NDEwMHkzcm9obXV4eHAwa2gifQ.gnKpQnhwJd18ch_1c-k7VQ").then(function(result) {
+        console.log(result);
+        map.setCenter(result);
+        map.setZoom(15);
+    });
+    var marker = new mapboxgl.Marker()
+        .setLngLat([32.73150954263981, -97.3435895069685])
+        .addTo(map);
 
+
+
+    var popup = new mapboxgl.Popup()
+        .setLngLat([-98.489615, 29.426827])
+        .setHTML("<p>Codeup Rocks!</p>")
+        .addTo(map)
 </script>
 </body>
 </html>
