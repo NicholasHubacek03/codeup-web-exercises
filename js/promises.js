@@ -1,25 +1,16 @@
-fetch("")
-function getLastCommitDate(username) {
-    const apiUrl = ``;
+"use strict";
 
-    return fetch(apiUrl)
+function dateOfLastCommit(ghUsername) {
+    return fetch(`https://api.github.com/users/${ghUsername}/events/public`, {
+        headers: {
+            'Authorization': `token ${GH_API_TOKEN}`
+        }
+    })
         .then(response => response.json())
-        .then(data => {
-            const lastCommitEvent = data.find(event => event.type === "PushEvent");
-            const lastCommitDate = lastCommitEvent ? new Date(lastCommitEvent.created_at).toLocaleDateString() : null;
-            return lastCommitDate;
-        })
-        .catch(error => console.error(error));
+        .then(events => {
+            let pushEvents = events.filter(event => event.type === 'PushEvent')
+            return pushEvents[0].created_at
+        });
 }
 
-console.log(getLastCommitDate())
-
-fetch('').then( response => {
-    response.json().then( users => {
-        users.forEach( userObj  => {
-            // do something with the username login
-            console.log(userObj.login);
-        });
-    });
-});
-
+dateOfLastCommit("NicholasHubacek").then(data => console.log(new Date(data).toDateString()));
